@@ -1,3 +1,5 @@
+from typing import Any
+
 from pydantic import BaseModel, Field
 
 
@@ -27,7 +29,7 @@ class SimulationResult(BaseModel):
     timestamp: int
     telemetry: TelemetrySeries
     logs: list[str]
-    ground_truth: dict[str, object]
+    ground_truth: dict[str, Any]
 
 
 class SimulateRequest(BaseModel):
